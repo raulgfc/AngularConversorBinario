@@ -1,7 +1,14 @@
-<h4>Conversor  de binário para decimal</h4>
+<mat-card-title>
+<h4 class="text-center">Conversor  de binário para decimal</h4>
+</mat-card-title>   
 <hr />
-<input type="text" placeholder="digite um número binário"/>
+<mat-card> <!--Cria um conteiner -->
+<mat-form-field> <!-- INFORMANDO QUE TEREMOS INSERCAO - Englobando nosso input dentro de um elemento de componente-->
+<input type="text"  matInput placeholder="digite um número binário" [(ngModel)]="numBinario" /> <!--numBinario é minha variavel -->
+</mat-form-field>
+
 <hr />
 <input type="text" />
 <hr />
-<button (click)="onConverterBinario()"> Calcular</button>
+<button color="primary" mat-raised-button (click)="onConverterBinario()"> Calcular </button>
+</mat-card>
