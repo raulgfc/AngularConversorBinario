@@ -5,4 +5,10 @@ import { Component } from "@angular/core";
     templateUrl:'./conversorBinario.component.html',
 })
 
-export class ConversorBinarioComponent{} //vincular ao app.modules sempre!
+export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
+
+    onConverterBinario(){ //criando um metodo
+        console.log('Convertendo valor binario...');
+    }
+
+}
