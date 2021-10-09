@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, EventEmitter, Output } from "@angular/core"; //declarei EventEmitter e Output
 
 
 @Component({
@@ -7,16 +7,17 @@ import { Component } from "@angular/core";
 })
 
 export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
+    @Output() numBinarioAdicionado = new EventEmitter(); 
+
     //definindo variaveis
-    numBinario: string;
+    numBinario: number;
 
     constructor(){
-        this.numBinario = " ";
+        this.numBinario = 0;
     }
-
 
     onConverterBinario(){ //criando um metodo
         console.log('Convertendo valor binario...');
-    }
-
+    };
+    
 }
