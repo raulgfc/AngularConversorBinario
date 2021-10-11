@@ -1,5 +1,10 @@
 import { Component, EventEmitter, Output } from "@angular/core"; //declarei EventEmitter e Output
 
+function binarioParaDecimal(numBi){
+    return numBi.split('').reverse().reduce(function(x, y, i){
+      return (y === '1') ? x + Math.pow(2, i) : x;
+    }, 0);
+  }
 
 @Component({
     selector: 'app-conversorBinario', //seletor entrara em uso na chamada do HTML, TypeScript, CSS, etc..
@@ -25,7 +30,7 @@ export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
 
         if (numBinario != null ) //verdadeiro
         {
-           this.numDecimal = parseInt(numBinario,2);
+           this.numDecimal = binarioParaDecimal(numBinario);
         }
         else{
             this.numDecimal = null;
@@ -35,3 +40,4 @@ export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
     };
     
 }
+
