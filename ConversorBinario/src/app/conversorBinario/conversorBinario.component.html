@@ -6,14 +6,13 @@
                 <input mdbInput type="text" class="form-control" placeholder="Digite um número binário" [(ngModel)]="numBinario" /> <!--numBinario é minha variavel -->
             </mat-form-field> 
     </div>
-    <div>
+    <div clas="div">
         <label class="col-auto">Número Decimal</label> 
         <mat-form-field class="form-group w-50" >
-            <output  type="text" class="form-control"  readonly> 
-                {{numDecimal}} 
-            </output>
+            <output  type="text" class="form-control"  readonly> {{numDecimal}} </output>
         </mat-form-field>
     </div>    
+    
    
     <button color="primary" mat-raised-button (click)="onConverterBinario()"> Calcular </button>
 

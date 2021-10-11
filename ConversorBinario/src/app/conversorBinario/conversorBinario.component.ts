@@ -10,12 +10,12 @@ export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
     @Output() numBinarioAdicionado = new EventEmitter(); 
 
     //definindo variaveis
-    numBinario: number;
-    numDecimal: number;
+    numBinario: string | null;
+    numDecimal: number | null;
 
     constructor(){
-        this.numBinario = 0;
-        this.numDecimal = 0;
+        this.numBinario = null;
+        this.numDecimal = null;
     }
 
     onConverterBinario(){ //criando um metodo
@@ -23,8 +23,14 @@ export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
         let numBinario = this.numBinario;
         let numDecimal = this.numDecimal;
 
-        this.numDecimal = numBinario * 2;
-        return null;
+        if (numBinario != null ) //verdadeiro
+        {
+           this.numDecimal = parseInt(numBinario,2);
+        }
+        else{
+            this.numDecimal = null;
+        }
+        return numDecimal;
 
     };
     
