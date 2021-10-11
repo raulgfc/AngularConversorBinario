@@ -30,7 +30,13 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component'; //usando o
     MatExpansionModule //declarei manualmente
     
   ],
+  exports: [
+    ConversorBinarioComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })  
-export class AppModule { }
+
+export class AppModule { 
+  
+}

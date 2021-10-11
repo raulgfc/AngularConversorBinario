@@ -11,13 +11,21 @@ export class ConversorBinarioComponent{ //vincular ao app.modules sempre!
 
     //definindo variaveis
     numBinario: number;
+    numDecimal: number;
 
     constructor(){
         this.numBinario = 0;
+        this.numDecimal = 0;
     }
 
     onConverterBinario(){ //criando um metodo
         console.log('Convertendo valor binario...');
+        let numBinario = this.numBinario;
+        let numDecimal = this.numDecimal;
+
+        this.numDecimal = numBinario * 2;
+        return null;
+
     };
     
 }
